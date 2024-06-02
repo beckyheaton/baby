@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Call the function to make the title fall
         fallTitle(title);
     });
+
+    showRandomImage('https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiIyODQxMDE5OS9vcmlnaW5hbF9kOTc2NTVhM2U3ZTkzMGVlYmU5NWExZjg0ZjZiMjY0MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjYwMCwiaGVpZ2h0Ijo2MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NjV9LCJmbGF0dGVuIjp7ImJhY2tncm91bmQiOnsiciI6MjAzLCJnIjoyMDMsImIiOjIwM319LCJqcGVnIjp7InF1YWxpdHkiOjY1fSwicm90YXRlIjpudWxsfX0=');
+    showRandomImage('https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiIyODQxMDQwNS9vcmlnaW5hbF82YzE3ZjFlYTJkMmU4Zjg4ODE4NzVhMWQyZGU5YzA0Zi5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjYwMCwiaGVpZ2h0Ijo2MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NjV9LCJmbGF0dGVuIjp7ImJhY2tncm91bmQiOnsiciI6MjAzLCJnIjoyMDMsImIiOjIwM319LCJqcGVnIjp7InF1YWxpdHkiOjY1fSwicm90YXRlIjpudWxsfX0=');
     
 
     
@@ -52,5 +55,35 @@ function fallTitle(titleElement) {
         }, 100 * (index + 1));
     });
 }
+
+// Place image of cookie in random places on the screen
+function showRandomImage(imageSrc) {
+    // Get the container element
+    const container = document.getElementById('imageContainer');
+    
+    // Create an image element
+    const image = document.createElement('img');
+    
+    // Set the source of the image
+    image.src = imageSrc;
+    
+    // Set CSS styles for positioning
+    image.style.position = 'absolute';
+    image.style.width = '200px'; // Adjust the size as needed
+    image.style.height = 'auto'; // Maintain aspect ratio
+    image.style.left = Math.random() * (window.innerWidth - 200) + 'px'; // Adjust for image width
+    image.style.top = Math.random() * (window.innerHeight - 200) + 'px'; // Adjust for image height
+    
+    // Append the image to the container
+    container.appendChild(image);
+    
+    // Add click event listener to the image
+    image.addEventListener('click', function() {
+        // Reposition the image to a random place on the screen when clicked
+        image.style.left = Math.random() * (window.innerWidth - 200) + 'px'; // Adjust for image width
+        image.style.top = Math.random() * (window.innerHeight - 200) + 'px'; // Adjust for image height
+    });
+}
+
 
 
