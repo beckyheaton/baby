@@ -5,15 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <script src="js/scripts.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script
-      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.0.1/Tone.min.js"></script>
-    <script src="./StartAudioContext.js"></script>
-    <script src="./matter.min.js"></script>
     
     <title>babysfirstwebsite</title>
     <link rel="stylesheet" href="css/styles.css">
@@ -21,63 +12,17 @@
 
 <body>
     <div id="title" class="title-small">
-        baby's first website
-        <br>
-        just for practice... how do I use js code
+        I've always loved you
     </div>
 
-    <!-- This is the falling words, each "box" is a letter
-    I've only done one word, but could repeat that "span" to make a sentence-->
-    <div id="container">
-        <span class="word">
-            <span class="box" style="position: absolute; left: 58.5991px; top: 864.573px; transform: rotate(0.741855rad);">A</span>
-            <span class="box" style="position: absolute; left: 89.0862px; top: 874.939px; transform: rotate(0.702967rad);">d</span>
-            <span class="box" style="position: absolute; left: 124.609px; top: 866.058px; transform: rotate(0.251639rad);">r</span>
-            <span class="box" style="position: absolute; left: 134.825px; top: 877.585px; transform: rotate(0.254222rad);">i</span>
-            <span class="box" style="position: absolute; left: 159.408px; top: 867.965px; transform: rotate(0.711237rad);">a</span>
-            <span class="box" style="position: absolute; left: 172.053px; top: 891.243px; transform: rotate(0.70456rad);">n</span>
-        </span>
-    </div>
-    
     <!-- 
+    I don't know if i need this
     <canvas>: This is an HTML element used to draw graphics, animations, and other visual elements on a web page.
     id="world": This sets the ID attribute of the <canvas> element to "world"
     This HTML code creates a canvas element with the ID "world" and specific dimensions, ready to be used for drawing graphics or animations using JavaScript.
     -->
     <canvas id="world" width="1792" height="1036"></canvas>
   
-    <!-- 
-    An iframe is used to embed another HTML document within the current HTML document, essentially creating a window into another webpage.
-    I've chosen not to include this stuff, it is the navigation menu to the other website... it requires a whole other style package
-    -->
-    <iframe id="nav" src="https://tdingsun.github.io/reading-machines/" class="">
-    </iframe>
-
-    <!-- 
-    <a> tag in HTML is an anchor element, commonly known as a hyperlink or link. It is used to create clickable links to other web pages, files, locations within the same page, or specific actions
-    -->
-    <a id="clockContainer" href="https://tdingsun.github.io/reading-machines/">
-        <div id="vertical" style="transform: rotate(1536690deg);" class=""></div>
-        <div id="horizontal" style="transform: rotate(765465deg);" class=""></div>
-    </a>
-
-    <!-- The Navigation Arrows -->
-    <div id="mute-btn">MUTE</div>
-    <div id="left-arrow" class="arrow" style="display: none;">←</div>
-    <div id="right-arrow" class="arrow">→</div>
-    <div id="up-arrow" class="arrow" style="display: none;">↑</div> 
-    <div id="down-arrow" class="arrow">↓</div>
-
-    <!--SCRIPTS:-->
-
-    <!-- A script that changes the title -->
-    <!-- <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Select the element with the id 'title' and change its text content
-            document.getElementById('title').textContent = "To be loved is to be changed";
-        });
-    </script> -->
-    
 
 </body>
 </html>
